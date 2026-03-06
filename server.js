@@ -69,7 +69,7 @@ app.delete("/delete/:id", async (req, res) => {
     res.json({ success: true });
 });
 module.exports = app;
-// Is block ko replace karein
+// Is block ko update karke save karein
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, '0.0.0.0', () => {
