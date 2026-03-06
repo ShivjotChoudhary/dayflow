@@ -16,3 +16,21 @@ body { margin: 0; font-family: 'Inter', sans-serif; background: var(--light); co
 .password-container { position: relative; }
 .password-container i { position: absolute; right: 15px; top: 25px; cursor: pointer; color: #94a3b8; }
 .footer { position: fixed; bottom: 20px; width: 100%; text-align: center; font-size: 0.75rem; color: #94a3b8; }
+.congrats-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: none; /* Default hidden */
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}

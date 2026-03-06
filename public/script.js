@@ -133,8 +133,22 @@ async function addTask() {
 }
 
 async function completeTask(id) {
-    await fetch("/complete/" + id, { method: "PUT" });
-    loadTasks();
+    try {
+        const response = await fetch(`/complete/${id}`, { method: 'PUT' });
+        if (response.ok) {
+            // "Congratulations" message dikhane ka logic
+            const toast = document.getElementById('congratsToast');
+            toast.style.display = 'block';
+            
+            // 3 second baad message apne aap gayab ho jaye
+            setTimeout(() => {
+                toast.style.display = 'none';
+                loadTasks(); // Purani list refresh karein
+            }, 3000);
+        }
+    } catch (err) {
+        console.error("Error completing task:", err);
+    }
 }
 
 async function deleteTask(id) {
