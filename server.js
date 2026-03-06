@@ -68,11 +68,10 @@ app.delete("/delete/:id", async (req, res) => {
     await Task.findByIdAndDelete(req.params.id);
     res.json({ success: true });
 });
-
-// Sirf ye last wala block update karein
+module.exports = app;
+// Is block ko replace karein
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`🚀 Server running on port ${PORT}`);
 });
-module.exports = app;
