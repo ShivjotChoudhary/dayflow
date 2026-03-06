@@ -1,18 +1,15 @@
 {
-  "name": "todo-tracker",
+  "name": "dayflow",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Smart Task Manager",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "mongoose": "^9.2.4"
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0",
+    "dotenv": "^16.0.0",
+    "cors": "^2.8.5"
   }
 }
