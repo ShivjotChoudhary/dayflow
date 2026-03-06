@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DayFlow - History</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <h2>DayFlow</h2>
+            <button onclick="location.href='index.html'"><i class="fas fa-calendar-day"></i> Today</button>
+            <button onclick="location.href='history.html'"><i class="fas fa-history"></i> History</button>
+            <button onclick="logout()" style="margin-top:auto"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+        <div class="main">
+            <h1>Completed Task History</h1>
+            <div id="historyEmpty" class="empty-state" style="display:none;">
+                <img src="https://cdn-icons-png.flaticon.com/512/4076/4076478.png" width="100">
+                <h3>No history found</h3>
+                <p>Complete some tasks to see them here.</p>
+            </div>
+            <div id="historyList"></div>
+        </div>
+    </div>
+    <footer class="footer">© 2026 DayFlow — Plan Smart. Work Better.</footer>
+    <script src="script.js"></script>
+    <script>
+        window.onload = loadHistory;
+    </script>
+</body>
+</html>
